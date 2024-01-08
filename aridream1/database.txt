@@ -1,0 +1,4 @@
+ queries to create 2 tables:
+ * create table users (id int auto_increment primary key, username varchar(255) unique key, name varchar(255) not null, password varchar(255) not null);  
+ * create table user_images (id int auto_increment primary key, poem varchar(255), image longblob, username varchar(255), favorite boolean DEFAULT 0,foreign key (username) references users (username));
+ * SET GLOBAL max_allowed_packet=67108864;
